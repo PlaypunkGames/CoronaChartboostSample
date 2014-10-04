@@ -1,0 +1,40 @@
+settings =
+{
+	orientation = {
+		default = "portrait", 
+		supported = { "portrait" }
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			CFBundleIconFile = "Icon.png",
+			CFBundleIconFiles =
+			{
+				"Icon.png", 
+				"Icon@2x.png", 
+				"Icon-72.png", 
+			}
+		}
+	},
+
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_NETWORK_STATE"
+		}
+	},
+	
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["plugin.chartboost"] =
+		{
+			-- required
+			publisherId = "com.swipeware"
+		}
+	}
+}
