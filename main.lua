@@ -12,16 +12,17 @@ local function chartBoostListener( event )
 end
 
 -- Your Chartboost app id and signature for iOS
-local yourAppID        = "xxxx"
-local yourAppSignature = "yyyy"
+local yourAppID        = "replaceWithYourIDforIOS"
+local yourAppSignature = "replaceWithYourSigForIOS"
 
 -- Change the appid/sig for Android
 if system.getInfo( "platformName" ) == "Android" then
-    yourAppID        = "xxxx"
-    yourAppSignature = "yyyy"
+    yourAppID        = "replaceWithYourIDforAndroid"
+    yourAppSignature = "replaceWithYourSigForAndroid"
 end
 
-print( "Chartboost plugin version: ".. chartboost.getPluginVersion() )
+print("Chartboost plugin version: ".. chartboost.getPluginVersion())
+print("Using ("..yourAppID..")("..yourAppSignature..")")
 
 -- Initialise ChartBoost
 chartboost.init {
